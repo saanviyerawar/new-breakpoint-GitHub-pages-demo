@@ -21,14 +21,26 @@ function createMenuCard(item) {
   const li = document.createElement("li");
   li.className = "menu-item";
 
-  li.innerHTML = `
-    <div class="menu-item-header">
-      <h3>${item.name}</h3>
-      <span class="price">${item.price}</span>
-    </div>
-    <p>${item.description}</p>
-    <p class="category">${item.category.charAt(0).toUpperCase()}${item.category.slice(1)}</p>
-  `;
+  const header = document.createElement("div");
+  header.className = "menu-item-header";
+
+  const title = document.createElement("h3");
+  title.textContent = item.name;
+
+  const price = document.createElement("span");
+  price.className = "price";
+  price.textContent = item.price;
+
+  header.append(title, price);
+
+  const description = document.createElement("p");
+  description.textContent = item.description;
+
+  const category = document.createElement("p");
+  category.className = "category";
+  category.textContent = `${item.category.charAt(0).toUpperCase()}${item.category.slice(1)}`;
+
+  li.append(header, description, category);
 
   return li;
 }
