@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sunset Bistro | Menu</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to menu</a>
+    <header class="site-header">
+      <div class="container">
+        <h1>Sunset Bistro</h1>
+        <p class="subtitle">Fresh, local, and made to share.</p>
+      </div>
+    </header>
+
+    <main id="main-content" class="container" tabindex="-1">
+      <section aria-labelledby="menu-heading">
+        <h2 id="menu-heading">Our Menu</h2>
+        <p class="section-intro">Browse by category or search your favorite dish.</p>
+
+        <div class="controls" aria-label="Menu filters">
+          <div class="category-buttons" role="group" aria-label="Filter menu by category">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="starters">Starters</button>
+            <button class="filter-button" type="button" data-filter="mains">Mains</button>
+            <button class="filter-button" type="button" data-filter="desserts">Desserts</button>
+            <button class="filter-button" type="button" data-filter="drinks">Drinks</button>
+          </div>
+          <div class="search-wrap">
+            <label for="menu-search">Search dishes</label>
+            <input id="menu-search" type="search" placeholder="e.g. pasta, cake" autocomplete="off">
+          </div>
+        </div>
+
+        <p id="results-count" class="results" aria-live="polite"></p>
+        <ul id="menu-list" class="menu-grid" aria-label="Restaurant menu items"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Open daily • 11:00 AM – 10:00 PM</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
