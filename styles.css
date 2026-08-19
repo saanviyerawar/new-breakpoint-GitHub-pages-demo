@@ -1,12 +1,13 @@
 :root {
-  color-scheme: light;
-  --bg: #fffdf8;
-  --surface: #ffffff;
-  --text: #2f2a25;
-  --muted: #685f56;
-  --brand: #8c3a1b;
-  --brand-soft: #f6e8e1;
-  --border: #e5d9cf;
+  color-scheme: dark;
+  --bg: #081833;
+  --surface: #102754;
+  --surface-alt: #0d2148;
+  --text: #e7efff;
+  --muted: #b3c3e8;
+  --brand: #86b4ff;
+  --brand-soft: #1b3f82;
+  --border: #345792;
 }
 
 * {
@@ -30,8 +31,8 @@ body {
   position: absolute;
   left: -9999px;
   top: 0;
-  background: #000;
-  color: #fff;
+  background: var(--brand);
+  color: #081833;
   padding: 0.5rem 0.75rem;
   z-index: 1000;
 }
@@ -43,7 +44,7 @@ body {
 
 .site-header,
 .site-footer {
-  background: var(--surface);
+  background: var(--surface-alt);
   border-bottom: 1px solid var(--border);
 }
 
@@ -88,7 +89,7 @@ main {
 .filter-button {
   border: 1px solid var(--brand);
   border-radius: 999px;
-  background: #fff;
+  background: var(--brand-soft);
   color: var(--brand);
   font: inherit;
   padding: 0.45rem 0.85rem;
@@ -99,7 +100,7 @@ main {
 .filter-button:hover,
 .filter-button:focus-visible {
   background: var(--brand);
-  color: #fff;
+  color: #081833;
 }
 
 .search-wrap {
@@ -113,6 +114,12 @@ main {
   border-radius: 0.4rem;
   padding: 0.55rem 0.7rem;
   font: inherit;
+  background: var(--surface);
+  color: var(--text);
+}
+
+#menu-search::placeholder {
+  color: var(--muted);
 }
 
 .results {
