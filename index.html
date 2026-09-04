@@ -3,45 +3,56 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sunset Bistro | Menu</title>
+    <title>Private Pages Demo</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to menu</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header">
-      <div class="container">
-        <h1>Sunset Bistro</h1>
-        <p class="subtitle">Fresh, local, and made to share.</p>
-      </div>
+      <nav class="container nav" aria-label="Primary navigation">
+        <p class="logo">Private Pages</p>
+        <a class="nav-link" href="#details">Details</a>
+      </nav>
     </header>
 
-    <main id="main-content" class="container" tabindex="-1">
-      <section aria-labelledby="menu-heading">
-        <h2 id="menu-heading">Our Menu</h2>
-        <p class="section-intro">Browse by category or search your favorite dish.</p>
-
-        <div class="controls" aria-label="Menu filters">
-          <div class="category-buttons" role="group" aria-label="Filter menu by category">
-            <button class="filter-button is-active" type="button" data-filter="all">All</button>
-            <button class="filter-button" type="button" data-filter="starters">Starters</button>
-            <button class="filter-button" type="button" data-filter="mains">Mains</button>
-            <button class="filter-button" type="button" data-filter="desserts">Desserts</button>
-            <button class="filter-button" type="button" data-filter="drinks">Drinks</button>
-          </div>
-          <div class="search-wrap">
-            <label for="menu-search">Search dishes</label>
-            <input id="menu-search" type="search" placeholder="e.g. pasta, cake" autocomplete="off">
-          </div>
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-content">
+          <p class="eyebrow">Private GitHub Pages Website</p>
+          <h1>A simple static home for private project notes.</h1>
+          <p class="intro">
+            This lightweight site is built with plain HTML, CSS, and JavaScript so it can be
+            hosted directly from a private GitHub Pages repository.
+          </p>
+          <a class="button" href="#details">View details</a>
         </div>
+      </section>
 
-        <p id="results-count" class="results" aria-live="polite"></p>
-        <ul id="menu-list" class="menu-grid" aria-label="Restaurant menu items"></ul>
+      <section id="details" class="container cards" aria-label="Website details">
+        <article class="card">
+          <h2>Static</h2>
+          <p>No build tools or server setup are required. The page is ready to publish as-is.</p>
+        </article>
+        <article class="card">
+          <h2>Simple</h2>
+          <p>Clean sections, readable text, and responsive styling keep the website easy to maintain.</p>
+        </article>
+        <article class="card">
+          <h2>Private</h2>
+          <p>Keep the repository private and manage access through GitHub repository permissions.</p>
+        </article>
+      </section>
+
+      <section id="welcome" class="container welcome">
+        <h2>Welcome</h2>
+        <p>Thanks for visiting this simple private GitHub Pages website.</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>Open daily • 11:00 AM – 10:00 PM</p>
+        <p>&copy; <span id="year"></span> Private Pages Demo</p>
       </div>
     </footer>
 
