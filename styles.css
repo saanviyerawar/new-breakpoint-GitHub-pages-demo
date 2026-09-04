@@ -141,7 +141,7 @@ h2 {
 }
 
 .card,
-.contact {
+.welcome {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -153,11 +153,11 @@ h2 {
 }
 
 .card p,
-.contact p {
+.welcome p {
   color: var(--muted);
 }
 
-.contact {
+.welcome {
   margin-bottom: 2rem;
   padding: 1.5rem;
   text-align: center;
